@@ -1,0 +1,100 @@
+.testimonial {
+  border-right: 6px solid #0b3578;
+  border-bottom: 6px solid #0b3578;
+  background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.10); 
+    border-radius: 10px;
+    padding:30px;
+    overflow: hidden;
+    position: relative;
+    min-height: 225px;
+    @media screen and (max-width:991px) {
+      height: fit-content;
+    }
+  }
+  // .testimonial:before {
+  //   content: "";
+  //   position: absolute;
+  //   bottom: -4px;
+  //   left: -17px;
+  //   border-top: 25px solid #0D6EFD;
+  //   border-left: 25px solid transparent;
+  //   border-right: 25px solid transparent;
+  //   transform: rotate(45deg);
+  // }
+  // .testimonial:after {
+  //   content: "";
+  //   position: absolute;
+  //   top: -4px;
+  //   left: -17px;
+  //   border-top: 25px solid #0D6EFD;
+  //   border-left: 25px solid transparent;
+  //   border-right: 25px solid transparent;
+  //   transform: rotate(135deg);
+  // }
+  .testimonial .pic {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+  }
+  .testimonial .pic img {
+    width: 100%;
+    height: auto;
+  }
+  .testimonial .description {
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #6f6f6f;
+    line-height: 25px;
+    margin-bottom: 15px;
+  }
+  .testimonial .title {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #0b3578;
+    margin: 0;
+  }
+  .testimonial .post {
+    display: inline-block;
+    font-size: 17px;
+    color: #0D6EFD;
+    font-style: italic;
+  }
+  .owl-theme .owl-controls .owl-page span {
+    border: 2px solid #2a3d7d;
+    background: #fff !important;
+    border-radius: 0 !important;
+    opacity: 1;
+  }
+  .owl-theme .owl-controls .owl-page.active span,
+  .owl-theme .owl-controls .owl-page:hover span {
+    background: #0D6EFD !important;
+    border-color: #0D6EFD;
+  }
+  @media only screen and (max-width: 767px) {
+    .testimonial {
+      padding: 20px;
+      text-align: center;
+    }
+  }
+  
+  .slick-list {margin: 0 -5px;}
+  .slick-slide>div {padding: 0 10px;
+  height: 100%;
+  }
+  
+  .slick-track {
+      display: flex !important;
+    }
+    
+    .slick-slide {
+      height: auto;
+    }

@@ -1,0 +1,55 @@
+.technology {
+  font-family: "Poppins", sans-serif;
+  background-color:#f2f7fa;
+  color: #202020;
+  padding-top: 115px;
+  padding-bottom: 120px;
+}
+
+.technology .header-section {
+  margin-bottom: 34px;
+}
+
+.technology .header-section .title {
+  position: relative;
+  padding-bottom: 14px;
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.technology .header-section .description {
+  font-size: 14px;
+  color: #282828;
+}
+
+.technology-list{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  .technology-items{
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px 50px 50px 5px;
+    border-right: 6px solid #0b3578;
+    display: flex;
+    padding: 5px 30px;
+    width: 250px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.10); 
+    margin-bottom: 10px;
+    img{
+      height: 40px;
+      margin-right: 20px;
+    }
+    span{
+      font-size: 40px;
+      margin-right: 20px;
+    }
+    div{
+      font-size: 25px;
+    }
+  }
+}

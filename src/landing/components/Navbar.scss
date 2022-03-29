@@ -1,0 +1,35 @@
+.landing-navbar{
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 100px;
+    border-bottom: 1px solid rgb(235, 234, 234);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+    @media screen and (max-width:991px) {
+        padding: 5px 10px;
+    }
+    img{
+        width: 160px;
+        @media screen and (max-width:991px) {
+            width: 100px;
+        }
+    }
+    .hire-now{
+       color: white; 
+       background-color: #0D6EFD;
+       padding: 10px 40px;
+       font-weight: 500;
+       border-radius: 50px;
+       font-size: 18px;
+       text-decoration: none;
+       border: none;
+       @media screen and (max-width:991px) {
+        font-size: 16px;
+        padding: 5px 20px;
+    }
+    }
+}
