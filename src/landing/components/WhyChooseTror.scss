@@ -124,16 +124,32 @@ border-radius: 50%;
 border:5px solid rgba(0, 0, 0, 0.07);
 margin-bottom: 50px;
 
-border-top: 8px solid #0b3578;
-border-bottom: 8px solid #0b3578;
+border-top: 8px solid #0b3578 !important;
+border-bottom: 8px solid #0b3578 !important;
 -webkit-transition: all .5s ease 0;
 transition: all .5s ease 0;
 transition: all 0.5s ease 0s;
+
+    @media screen and (max-width:962px){
+        padding:6px 36px;
+    }
+
+    @media screen and (max-width:572px){
+        border-radius:10px;
+    }
+
+    @media screen and (max-width:480px){
+        padding: 5px 45px;
+        border-radius: 50%;
+    }
+    @media screen and (max-width:353px){
+        border-radius: 10px;
+    }
 }
 .item:hover{
 background:#0D6EFD;
-border-right: 8px solid #0b3578;
-border-left: 8px solid #0b3578;
+border-right: 8px solid #0b3578 !important;
+border-left: 8px solid #0b3578 !important;
 box-shadow:0 8px 20px 0px rgba(0, 0, 0, 0.2);
 -webkit-transition: all .5s ease 0;
 transition: all .5s ease 0;
