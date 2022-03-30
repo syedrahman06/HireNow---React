@@ -204,19 +204,15 @@ const LandingPage = () => {
           <div className="col-md-7">
             <div className="intro">
               <h1>Hire the Best Remote Talents</h1>
-              <p className="mt-3">
-                Tror helps you understand the expertise of the resources before you hire IT freelancers. Our process workflow ensures smooth communication and successful dedicated engagement which will lead to better and faster results. We have a team of highly experienced and world class professionals who can take your business to the next level. If you are looking to hire dedicated resources to improve the performance of your team, other IT consulting staff. Reach out to us now!
-              </p>
-
-              <h4>Reasons to Hire Resources from Tror</h4>
               <div className="row">
                 <div className="col-md-6">
                   <div className="bullet-reason my-2">
-                    <div className="icon">
+                    <div className="icon" style={{ color: '#fff' }}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="8.503"
                         height="14.43"
+
                         viewBox="0 0 8.503 14.43"
                       >
                         <path
@@ -319,6 +315,12 @@ const LandingPage = () => {
                   </div>
                 </div>
               </div>
+              <p className="mt-3">
+                Tror helps you understand the expertise of the resources before you hire IT freelancers. Our process workflow ensures smooth communication and successful dedicated engagement which will lead to better and faster results. We have a team of highly experienced and world class professionals who can take your business to the next level. If you are looking to hire dedicated resources to improve the performance of your team, other IT consulting staff. Reach out to us now!
+              </p>
+
+              {/* <h4>Reasons to Hire Resources from Tror</h4> */}
+
             </div>
           </div>
 
