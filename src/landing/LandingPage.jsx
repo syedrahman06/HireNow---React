@@ -9,6 +9,9 @@ import Testimonials from "./components/Testimonials";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import emailjs from "emailjs-com";
+import Carousel from "react-bootstrap/Carousel";
+import ai from "./Assets/ai.webp"
+
 const LandingPage = () => {
   const [message, setMessage] = useState("");
   const [btnDisable, setBtnDisable] = useState(false);
@@ -44,13 +47,13 @@ const LandingPage = () => {
   return (
     <div className="landing-page">
       <Navbar />
-      <div className="container-fluid " style={{ position: 'relative', backgroundImage: 'linear-gradient(#0f408f,#000)', margin: '0 !important', padding: '40px 30px' }}>
+      <div className="container-fluid " style={{}}>
 
         <div className="row flex-row-reverse">
 
-          <div className="col-md-5 form-section" >
+          <div className="col-md-4 form-section" >
             <div className="landing-form mb-4" id="form">
-              <h2 className="mt-3">Hire a Developer</h2>
+              <h2 className="mt-3">Hire a Talent</h2>
               <form onSubmit={sendEmail}>
                 {/* <p>Guaranteed response within one business day!</p> */}
                 {message && (
@@ -107,87 +110,9 @@ const LandingPage = () => {
                     disabled={btnDisable}
                   />
                 </div>
-                <p
-                  className="mb-1"
-                  style={{
-                    textAlign: "left",
-                    color: "#0D6EFD",
-                    fontWeight: "600",
-                  }}
-                >
-                  Duration of resources
-                </p>
-                <div class="form-check form-check-inline">
-                  <input
-                    required
-                    class="form-check-input"
-                    type="radio"
-                    name="duration"
-                    value="less than 6 months"
-                    disabled={btnDisable}
-                  />
-                  <label class="form-check-label duration-radio">
-                    less than 6 months
-                  </label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input
-                    required
-                    class="form-check-input"
-                    type="radio"
-                    name="duration"
-                    value="6-12 months"
-                    disabled={btnDisable}
-                  />
-                  <label class="form-check-label duration-radio">
-                    6-12 months
-                  </label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input
-                    required
-                    class="form-check-input"
-                    type="radio"
-                    name="duration"
-                    value="more than 1 year"
-                    disabled={btnDisable}
-                  />
-                  <label class="form-check-label duration-radio">
-                    more than 1 year
-                  </label>
-                </div>
-                <p
-                  className="mb-1 mt-2"
-                  style={{
-                    textAlign: "left",
-                    color: "#0D6EFD",
-                    fontWeight: "600",
-                  }}
-                >
-                  Work location
-                </p>
-                <div class="form-check form-check-inline">
-                  <input
-                    required
-                    class="form-check-input"
-                    type="radio"
-                    name="workLocation"
-                    value="remote"
-                    disabled={btnDisable}
-                  />
-                  <label class="form-check-label duration-radio">remote</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input
-                    required
-                    class="form-check-input"
-                    type="radio"
-                    name="workLocation"
-                    value="Onsite"
-                    disabled={btnDisable}
-                  />
-                  <label class="form-check-label duration-radio">Onsite</label>
-                </div>
+
+
+
                 <div class="d-grid mt-3">
                   <input
                     type="submit"
@@ -200,145 +125,326 @@ const LandingPage = () => {
               </form>
             </div>
           </div>
+          <div className="col-md-8">
+            <Carousel variant="dark" className="landing-carousel">
+              <Carousel.Item>
 
-          <div className="col-md-7">
-            <div className="intro">
-              <h1>Hire the Best Remote Talents</h1>
-              <div className="row">
-                <div className="col-md-6">
-                  <div className="bullet-reason my-2">
-                    <div className="icon" style={{ color: '#fff' }}>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="8.503"
-                        height="14.43"
+                <div className="intro">
+                  <h1>Hire the Best Talents</h1>
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="bullet-reason my-2">
+                        <div className="icon" style={{ color: '#fff' }}>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="8.503"
+                            height="14.43"
 
-                        viewBox="0 0 8.503 14.43"
-                      >
-                        <path
-                          d="M.377 2.211l5.01 5.01-5.01 5.01a1.288 1.288 0 101.821 1.821L8.12 8.125a1.286 1.286 0 000-1.821L2.198.377a1.286 1.286 0 00-1.821 0 1.314 1.314 0 000 1.834z"
-                          fill="#0D6EFD"
-                        ></path>
-                      </svg>
+                            viewBox="0 0 8.503 14.43"
+                          >
+                            <path
+                              d="M.377 2.211l5.01 5.01-5.01 5.01a1.288 1.288 0 101.821 1.821L8.12 8.125a1.286 1.286 0 000-1.821L2.198.377a1.286 1.286 0 00-1.821 0 1.314 1.314 0 000 1.834z"
+                              fill="#000"
+                            ></path>
+                          </svg>
+                        </div>
+                        Dedicated Resources
+                      </div>
                     </div>
-                    Dedicated Resources
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="bullet-reason my-2">
-                    <div className="icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="8.503"
-                        height="14.43"
-                        viewBox="0 0 8.503 14.43"
-                      >
-                        <path
-                          d="M.377 2.211l5.01 5.01-5.01 5.01a1.288 1.288 0 101.821 1.821L8.12 8.125a1.286 1.286 0 000-1.821L2.198.377a1.286 1.286 0 00-1.821 0 1.314 1.314 0 000 1.834z"
-                          fill="#0D6EFD"
-                        ></path>
-                      </svg>
+                    <div className="col-md-6">
+                      <div className="bullet-reason my-2">
+                        <div className="icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="8.503"
+                            height="14.43"
+                            viewBox="0 0 8.503 14.43"
+                          >
+                            <path
+                              d="M.377 2.211l5.01 5.01-5.01 5.01a1.288 1.288 0 101.821 1.821L8.12 8.125a1.286 1.286 0 000-1.821L2.198.377a1.286 1.286 0 00-1.821 0 1.314 1.314 0 000 1.834z"
+                              fill="#000"
+                            ></path>
+                          </svg>
+                        </div>
+                        Verified Skills
+                      </div>
                     </div>
-                    Verified Skills
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="bullet-reason my-2">
-                    <div className="icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="8.503"
-                        height="14.43"
-                        viewBox="0 0 8.503 14.43"
-                      >
-                        <path
-                          d="M.377 2.211l5.01 5.01-5.01 5.01a1.288 1.288 0 101.821 1.821L8.12 8.125a1.286 1.286 0 000-1.821L2.198.377a1.286 1.286 0 00-1.821 0 1.314 1.314 0 000 1.834z"
-                          fill="#0D6EFD"
-                        ></path>
-                      </svg>
+                    <div className="col-md-6">
+                      <div className="bullet-reason my-2">
+                        <div className="icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="8.503"
+                            height="14.43"
+                            viewBox="0 0 8.503 14.43"
+                          >
+                            <path
+                              d="M.377 2.211l5.01 5.01-5.01 5.01a1.288 1.288 0 101.821 1.821L8.12 8.125a1.286 1.286 0 000-1.821L2.198.377a1.286 1.286 0 00-1.821 0 1.314 1.314 0 000 1.834z"
+                              fill="#000"
+                            ></path>
+                          </svg>
+                        </div>
+                        Experienced Professionals
+                      </div>
                     </div>
-                    Experienced Professionals
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="bullet-reason my-2">
-                    <div className="icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="8.503"
-                        height="14.43"
-                        viewBox="0 0 8.503 14.43"
-                      >
-                        <path
-                          d="M.377 2.211l5.01 5.01-5.01 5.01a1.288 1.288 0 101.821 1.821L8.12 8.125a1.286 1.286 0 000-1.821L2.198.377a1.286 1.286 0 00-1.821 0 1.314 1.314 0 000 1.834z"
-                          fill="#0D6EFD"
-                        ></path>
-                      </svg>
+                    <div className="col-md-6">
+                      <div className="bullet-reason my-2">
+                        <div className="icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="8.503"
+                            height="14.43"
+                            viewBox="0 0 8.503 14.43"
+                          >
+                            <path
+                              d="M.377 2.211l5.01 5.01-5.01 5.01a1.288 1.288 0 101.821 1.821L8.12 8.125a1.286 1.286 0 000-1.821L2.198.377a1.286 1.286 0 00-1.821 0 1.314 1.314 0 000 1.834z"
+                              fill="#000"
+                            ></path>
+                          </svg>
+                        </div>
+                        Direct Communication
+                      </div>
                     </div>
-                    Direct Communication
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="bullet-reason my-2">
-                    <div className="icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="8.503"
-                        height="14.43"
-                        viewBox="0 0 8.503 14.43"
-                      >
-                        <path
-                          d="M.377 2.211l5.01 5.01-5.01 5.01a1.288 1.288 0 101.821 1.821L8.12 8.125a1.286 1.286 0 000-1.821L2.198.377a1.286 1.286 0 00-1.821 0 1.314 1.314 0 000 1.834z"
-                          fill="#0D6EFD"
-                        ></path>
-                      </svg>
+                    <div className="col-md-6">
+                      <div className="bullet-reason my-2">
+                        <div className="icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="8.503"
+                            height="14.43"
+                            viewBox="0 0 8.503 14.43"
+                          >
+                            <path
+                              d="M.377 2.211l5.01 5.01-5.01 5.01a1.288 1.288 0 101.821 1.821L8.12 8.125a1.286 1.286 0 000-1.821L2.198.377a1.286 1.286 0 00-1.821 0 1.314 1.314 0 000 1.834z"
+                              fill="#000"
+                            ></path>
+                          </svg>
+                        </div>
+                        Work In Your Timezone
+                      </div>
                     </div>
-                    Work In Your Timezone
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="bullet-reason my-2">
-                    <div className="icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="8.503"
-                        height="14.43"
-                        viewBox="0 0 8.503 14.43"
-                      >
-                        <path
-                          d="M.377 2.211l5.01 5.01-5.01 5.01a1.288 1.288 0 101.821 1.821L8.12 8.125a1.286 1.286 0 000-1.821L2.198.377a1.286 1.286 0 00-1.821 0 1.314 1.314 0 000 1.834z"
-                          fill="#0D6EFD"
-                        ></path>
-                      </svg>
+                    <div className="col-md-6">
+                      <div className="bullet-reason my-2">
+                        <div className="icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="8.503"
+                            height="14.43"
+                            viewBox="0 0 8.503 14.43"
+                          >
+                            <path
+                              d="M.377 2.211l5.01 5.01-5.01 5.01a1.288 1.288 0 101.821 1.821L8.12 8.125a1.286 1.286 0 000-1.821L2.198.377a1.286 1.286 0 00-1.821 0 1.314 1.314 0 000 1.834z"
+                              fill="#000"
+                            ></path>
+                          </svg>
+                        </div>
+                        Cost Effective
+                      </div>
                     </div>
-                    Cost Effective
                   </div>
-                </div>
-              </div>
-              <p className="mt-3">
-                Tror helps you understand the expertise of the resources before you hire IT freelancers. Our process workflow ensures smooth communication and successful dedicated engagement which will lead to better and faster results. We have a team of highly experienced and world class professionals who can take your business to the next level. If you are looking to hire dedicated resources to improve the performance of your team, other IT consulting staff. Reach out to us now!
-              </p>
+                  <p className="mt-3">
+                    Tror helps you understand the expertise of the resources before you hire IT freelancers. Our process workflow ensures smooth communication and successful dedicated engagement which will lead to better and faster results. We have a team of highly experienced and world class professionals who can take your business to the next level. If you are looking to hire dedicated resources to improve the performance of your team, other IT consulting staff. Reach out to us now!
+                  </p>
 
-              {/* <h4>Reasons to Hire Resources from Tror</h4> */}
+                  {/* <h4>Reasons to Hire Resources from Tror</h4> */}
 
-            </div>
+
+                </div>
+              </Carousel.Item>
+              <Carousel.Item>
+                <div className="technology py-5">
+                  <div class="container">
+                    <div class="row justify-content-center text-center">
+                      <div class="col-md-10 col-lg-8">
+                        <div class="header-section">
+                          <h2 class="title">Technology we cover</h2>
+                          {/* <p class="description">
+                            We cover a wide range of technologies to meet your diverse needs and demands.
+                          </p> */}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="technology-list">
+                      <div className="technology-items">
+                        <img src={ai} alt="" />
+                        <div>AI</div>
+                      </div>
+                      <div className="technology-items">
+                        <span style={{ color: "#DD4B25" }}><i class="fa-brands fa-html5"></i></span>
+                        <div>HTML</div>
+                      </div>
+                      <div className="technology-items">
+                        <span style={{ color: "#2965F1" }}><i class="fa-brands fa-css3-alt"></i></span>
+                        <div>CSS</div>
+                      </div>
+                      <div className="technology-items">
+                        <span style={{ color: "#207196" }}><i class="fa-brands fa-wordpress"></i></span>
+                        <div>Wordpress</div>
+                      </div>
+
+                      <div className="technology-items">
+                        <span style={{ color: "#5ED3F3" }}><i class="fa-brands fa-react"></i></span>
+                        <div>React.js</div>
+                      </div>
+                      <div className="technology-items">
+                        <span style={{ color: "#87BF00" }}><i class="fa-brands fa-node-js"></i></span>
+                        <div>NodeJs</div>
+                      </div>
+                      <div className="technology-items">
+                        <span style={{ color: "black" }}><i class="fa-brands fa-aws"></i></span>
+                        <div>AWS</div>
+                      </div>
+                      <div className="technology-items">
+                        <span style={{ color: "#3674AB" }}><i class="fa-brands fa-python"></i></span>
+                        <div>Python</div>
+                      </div>
+                      <div className="technology-items">
+                        <span style={{ color: "#F72C1F" }}><i class="fa-brands fa-laravel"></i></span>
+                        <div>PHP/Larvel</div>
+                      </div>
+                      <div className="technology-items">
+                        <span style={{ color: "#D82D2F" }}><i class="fa-brands fa-angular"></i></span>
+                        <div>Angular</div>
+                      </div>
+                      <div className="technology-items">
+                        <span style={{ color: "#EFD81D" }}><i class="fa-brands fa-js"></i></span>
+                        <div>JavaScript</div>
+                      </div>
+                      <div className="technology-items">
+                        <span style={{ color: "#858EBB" }}><i class="fa-brands fa-php"></i></span>
+                        <div>PHP</div>
+                      </div>
+                      <div className="technology-items">
+                        <span style={{ color: "#3BD480" }}><i class="fa-brands fa-android"></i></span>
+                        <div>Android</div>
+                      </div>
+                      <div className="technology-items">
+                        <span style={{ color: "#95BF47" }}><i class="fa-brands fa-shopify"></i></span>
+                        <div>Shopify</div>
+                      </div>
+                      <div className="technology-items">
+                        <span style={{ color: "skyblue" }}><i class="fa-solid fa-cloud"></i></span>
+                        <div>Cloud </div>
+                      </div>
+                      <div className="technology-items">
+                        <span style={{ color: "black" }}><i class="fa-brands fa-java"></i></span>
+                        <div>Java</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Carousel.Item>
+              <Carousel.Item>
+                <div className="whychoosetror ">
+
+                  <div className="container py-5">
+
+                    <div className="row g-3">
+                      <div class="section-head col-sm-12">
+                        <h4>
+                          <span>Why Choose</span> Tror?
+                        </h4>
+                        <p>
+                          Tror offers high level and satisfactory resources in an affordable cost.
+                        </p>
+                      </div>
+
+                      <div class="col-lg-6 col-sm-6 ">
+                        <div className="element">
+
+                          <div className="tet">
+                            <i class="fa-solid fa-user" style={{ marginRight: '10px' }}></i>
+                            <h6>Dedicated Resources </h6>
+
+                          </div>
+                          <p>
+                            We provide 100% dedicated resources for faster and better results.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-sm-6">
+                        <div className="element">
+
+                          <div className="tet">
+                            <i class="fa-solid fa-circle-check" style={{ marginRight: '10px' }}></i>
+                            <h6>Verified Skills</h6>
+
+                          </div>
+                          <p>
+                            All our resources are verified with their skills and certificates.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-sm-6">
+                        <div className="element">
+
+                          <div className="tet">
+                            <i class="fa-solid fa-user-plus" style={{ marginRight: '10px' }}></i>
+                            <h6>Experienced Professionals</h6>
+
+                          </div>
+                          <p>
+                            Our professionals are highly experienced who can provide effective solutions.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-sm-6">
+                        <div className="element">
+
+                          <div className="tet">
+                            <i class="fa-solid fa-comments" style={{ marginRight: '10px' }}></i>
+                            <h6>Direct Communication</h6>
+
+                          </div>
+                          <p>
+                            We provide direct communication system to yield better and faster results.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-sm-6">
+                        <div className="element">
+
+                          <div className="tet">
+                            <i class="fa-solid fa-clock" style={{ marginRight: '10px' }}></i>
+                            <h6>Work In Your Timezone</h6>
+
+                          </div>
+                          <p>
+                            Our resources are available to work with you in your timezone.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-sm-6">
+                        <div className="element">
+
+                          <div className="tet">
+                            <i class="fa-solid fa-sack-dollar" style={{ marginRight: '10px' }}></i>
+                            <h6>Cost Effective</h6>
+
+                          </div>
+                          <p>
+                            We provide a cost effecting solution which helps you hire more resources.
+                          </p>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </Carousel.Item>
+
+            </Carousel>
+
+
           </div>
+        </div>
 
-        </div>
-        <div class="custom-shape-divider-bottom-1648465493">
-          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-            preserveAspectRatio="none">
-            <path
-              d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-              class="shape-fill"></path>
-          </svg>
-        </div>
       </div>
 
-      <Technology />
+      {/* <Technology />
       <WhyChooseTror />
       <OurClients />
-      <Testimonials />
+      <Testimonials /> */}
       <FAQ />
       <Footer />
     </div >

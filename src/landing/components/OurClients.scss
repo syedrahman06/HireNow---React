@@ -24,6 +24,7 @@
 
 .carousel-control-next{
     right:-92px;
+    
     @media screen and (max-width: 654px) {
         right: -30px;
     }
@@ -52,16 +53,17 @@
 }
 
 .carousel-inner{
-    // border: 2px solid black;
+    
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.10);
     border-radius: 0px 30px 0px 30px;
-    border-right: 6px solid #0b3578;
-    padding: 31px 30px;
-    background-color: #0b3578;
+    // border-right: 6px solid #0b3578;
+    // padding: 31px 30px;
+    background-color: transparent
 }
 
 .carousel-item {
     position: relative;
+    
     display: none;
     float: left;
     width: 100%;

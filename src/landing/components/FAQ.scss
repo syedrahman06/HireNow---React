@@ -1,10 +1,10 @@
 
 .faq-section {
-    background: #fff;
+    background: #0E0D0D;
 }
 
 .faq-left{
-  color: rgb(72, 72, 72);
+  color: #fff;
   padding-right: 30px;
   h1{
     font-weight: 700 !important;
@@ -12,7 +12,7 @@
   }
   p{
     span{
-      color: #0b3578;
+      color: #fca434;
     }
   }
   @media screen and (max-width:991px) {
@@ -34,7 +34,7 @@
     left: 50%;
     width: 60px;
     height: 2px;
-    background: #0D6EFD;
+    background: #fca434;
     bottom: -25px;
     margin-left: -30px;
 }
@@ -55,7 +55,7 @@
   border-radius: 0;
   border-bottom: 1px solid rgb(192, 192, 192);
   &:hover{
-    border-bottom: 1px solid #0D6EFD;
+    border-bottom: 1px solid #fca434;
   }
 }
 
@@ -76,7 +76,7 @@
   font-weight: 400;
   font-size: 15px;
   letter-spacing: 1px;
-  color: #3B566E;
+  color: #fca534a6;
   text-decoration: none !important;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -98,13 +98,13 @@
   line-height: 14px;
   float: right;
   text-align: center;
-  color: gray;
+  color: #fca434;
   font-size: 20px;
   margin-right: 20px;
 }
 
 .fa-angle-up{
-  color: #0b3578;
+  color: #fca434;
 }
 
 .faq .card .card-body {
@@ -113,7 +113,7 @@
   padding-bottom: 16px;
   font-weight: 400;
   font-size: 16px;
-  color: #6F8BA4;
+  color: #fca434;
   line-height: 28px;
   letter-spacing: 1px;
   border-top: 1px solid #F3F8FF;
@@ -131,4 +131,8 @@
     line-height: 26px;
     margin-top: 10px;
   }
+}
+
+.text-center{
+  background-color: #0E0D0D;
 }

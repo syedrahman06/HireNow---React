@@ -1,9 +1,10 @@
 .technology {
   font-family: "Poppins", sans-serif;
-  background-color:#f2f7fa;
+  background-color:transparent;
   color: #202020;
-  padding-top: 115px;
-  padding-bottom: 120px;
+  padding-top: 20px;
+  padding-bottom: 15px !important;
+  text-align: left;
 }
 
 .technology .header-section {
@@ -13,14 +14,14 @@
 .technology .header-section .title {
   position: relative;
   padding-bottom: 14px;
-  margin-bottom: 25px;
-  font-weight: 700;
-  font-size: 32px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 30px;
 }
 
 .technology .header-section .description {
   font-size: 14px;
-  color: #282828;
+  color: #fff;
 }
 
 .technology-list{
@@ -32,24 +33,38 @@
   .technology-items{
     align-items: center;
     background-color: #fff;
-    border: 1px solid #e1e1e1;
+    // border: 1px solid #e1e1e1;
     border-radius: 5px 50px 50px 5px;
-    border-right: 6px solid #0b3578;
+    border-right: 6px solid #fca434;
+    color: #000;
     display: flex;
-    padding: 5px 30px;
-    width: 250px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.10); 
+    padding: 5px 7px;
+    width: 150px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.30); 
     margin-bottom: 10px;
     img{
       height: 40px;
-      margin-right: 20px;
+      margin-right: 6px;
     }
     span{
       font-size: 40px;
-      margin-right: 20px;
+      margin-right: 6px;
     }
     div{
-      font-size: 25px;
+      font-size: 15px;
     }
+  }
+}
+
+@media only screen and (max-width:438px){
+  .technology-items{
+    width: 230px !important;
+  }
+  div{
+    font-size: 20px !important;
+  }
+  span{
+
+    margin-right: 20px !important;
   }
 }

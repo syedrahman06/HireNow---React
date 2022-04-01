@@ -11,7 +11,7 @@ const OurClients = () => {
         <div className="ourClientsSlider">
           <h4>Our Clients</h4>
           <p>Here is the list of our valuable clients who take regular resources from us.</p>
-          <Carousel variant="dark" className="landing-carousel">
+          <Carousel variant="light" className="landing-carousel">
             <Carousel.Item>
               <img
                 className="d-block w-100"
