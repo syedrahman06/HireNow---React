@@ -16,76 +16,81 @@ const WhyChooseTror = () => {
             </p>
           </div>
 
-          <div class="col-lg-4 col-sm-6 ">
-            <div class="item h-100">
-              {" "}
-              <span class="icon feature_box_col_one">
-                <i class="fa-solid fa-user"></i>
-              </span>
+          <div className="col-lg-4 col-sm-6 ">
+            <div className="part">
+
+
+              <i class="fa-solid fa-user" style={{ marginRight: '10px', fontSize: '25px', marginBottom: '10px' }}></i>
               <h6>Dedicated Resources </h6>
               <p>
                 We provide 100% dedicated resources for faster and better results.
               </p>
+
             </div>
           </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="item h-100">
-              {" "}
-              <span class="icon feature_box_col_two">
-                <i class="fa-solid fa-circle-check"></i>
-              </span>
+
+          <div className="col-lg-4 col-sm-6 ">
+            <div className="part">
+
+
+              <i class="fa-solid fa-circle-check" style={{ marginRight: '10px', fontSize: '25px', marginBottom: '10px' }}></i>
               <h6>Verified Skills</h6>
               <p>
                 All our resources are verified with their skills and certificates.
               </p>
+
             </div>
           </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="item h-100">
-              {" "}
-              <span class="icon feature_box_col_three">
-                <i class="fa-solid fa-user-plus"></i>
-              </span>
+
+          <div className="col-lg-4 col-sm-6 ">
+            <div className="part">
+
+
+              <i class="fa-solid fa-user-plus" style={{ marginRight: '10px', fontSize: '25px', marginBottom: '10px' }}></i>
               <h6>Experienced Professionals</h6>
               <p>
                 Our professionals are highly experienced who can provide effective solutions.
               </p>
+
             </div>
           </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="item h-100">
-              {" "}
-              <span class="icon feature_box_col_four">
-                <i class="fa-solid fa-comments"></i>
-              </span>
+
+          <div className="col-lg-4 col-sm-6 ">
+            <div className="part">
+
+
+              <i class="fa-solid fa-comments" style={{ marginRight: '10px', fontSize: '25px', marginBottom: '10px' }}></i>
               <h6>Direct Communication</h6>
               <p>
-                We provide direct communication system to yield better and faster results.
+                We provide direct communication system to yield better results.
               </p>
+
             </div>
           </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="item h-100">
-              {" "}
-              <span class="icon feature_box_col_five">
-                <i class="fa-solid fa-clock"></i>
-              </span>
+
+          <div className="col-lg-4 col-sm-6 ">
+            <div className="part">
+
+
+              <i class="fa-solid fa-clock" style={{ marginRight: '10px', fontSize: '25px', marginBottom: '10px' }}></i>
               <h6>Work In Your Timezone</h6>
               <p>
                 Our resources are available to work with you in your timezone.
               </p>
+
             </div>
           </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="item h-100">
-              {" "}
-              <span class="icon feature_box_col_six">
-                <i class="fa-solid fa-sack-dollar"></i>
-              </span>
-              <h6>Cost Effective</h6>
+
+          <div className="col-lg-4 col-sm-6 ">
+            <div className="part">
+
+
+              <i class="fa-solid fa-sack-dollar" style={{ marginRight: '10px', fontSize: '25px', marginBottom: '10px' }}></i>
+              <h6>Cost Effective </h6>
               <p>
                 We provide a cost effecting solution which helps you hire more resources.
               </p>
+
             </div>
           </div>
         </div>

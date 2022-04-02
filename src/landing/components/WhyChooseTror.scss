@@ -44,7 +44,7 @@ text-decoration: none;
 color: inherit;
 }
 .whychoosetror{
-    background-color: transparent;
+    background-color: #0E0D0D;
 }
 .section-head {
 margin-bottom: 5px;
@@ -292,6 +292,56 @@ background:rgba(0, 0, 0, 0.9);
 padding: 3px 7px;
 border-radius: 30px;
 }
+
+// 
+.part{
+  
+    border-radius: 10px;
+    padding: 50px;
+    height: 200px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    border-right: 7px solid #fca434;
+    border-left: 7px solid #fca434;
+    margin: 10px;
+    cursor: pointer;
+    h6{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    p{
+        font-size: 15px;
+        color: #000;
+        font-weight: 400;
+    }
+}
+
+
+.part:hover{
+    background-color: #fca434;
+    border: 7px solid #fff;
+    -webkit-transition: all .5s ease 0;
+transition: all .5s ease 0;
+transition: all 0.5s ease 0s;
+
+}
+
+@media screen and (max-width:438px){
+    .part{
+        height: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
