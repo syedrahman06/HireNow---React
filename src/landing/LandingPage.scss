@@ -10,7 +10,7 @@
     position: relative;
     background-color: #0E0D0D;
     margin: 0 !important;
-    padding: 20px 75px 80px 75px !important;
+    padding: 0px 75px 50px 75px !important;
     height: auto; 
 }
 
@@ -43,13 +43,13 @@
         }
     }
     h1{
-        font-size: 50px;
+        font-size: 40px;
         color: #ffffff;
         font-weight: 600;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
     p{
-        font-size: 18px;
+        font-size: 15px !important;
     text-align: justify;
     color: #fff;
     }
@@ -84,10 +84,11 @@
     h2{
         color: #fff;
     font-weight: 600;
+    font-size: 23px;
     background-color: #fca434;
         text-align: center;
         border-radius: 0.5rem 0.5rem 0 0;
-        padding: 1.4rem;
+        padding: 0.7rem;
         box-shadow: 0 3px 5px rgba(0, 0, 0 , 0.06);
     }
     @media screen and (max-width:480px) {
@@ -124,8 +125,8 @@
         color: rgb(36, 36, 36);
     }
     input[type="submit"]{
-        padding: 15px 0;
-        font-size: 20px;
+        padding: 10px 0px;
+        font-size: 17px;
         font-weight: 600;
         border-radius: 100px;
         background-color: #fca434;
@@ -146,9 +147,10 @@ input:focus {
     border-radius: 0px 10px 0px 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.30);
     display: flex;
+    height: 140px;
     justify-content: center;
     align-items: flex-start;
-    padding: 9px 15px;
+    padding: 5px 15px 0px 15px !important;
     flex-direction: column;
     align-content: center;
     border-right: 8px solid #fff;
@@ -166,6 +168,7 @@ input:focus {
 @media only screen and (max-width:438px){
     .element{
         text-align: center !important;
+        height: auto !important;
     }
     .tet{
         display: flex !important;
@@ -182,6 +185,10 @@ flex-wrap: wrap;
 align-content: center;
 justify-content: center;
 align-items: flex-start;
+p{
+    font-size: 13px;
+    margin-bottom: 10px !important;
+}
 }
 
 
@@ -200,4 +207,49 @@ align-items: flex-start;
         padding: 20px 30px 80px 30px !important;
     }
     
+}
+
+.logos{
+    border: 2px solid white;
+    height: 150px;
+}
+
+.sec-head h4{
+    position: relative;
+padding:0;
+color:#fca434;
+line-height: 1;
+letter-spacing:0.3px;
+font-size: 34px;
+font-weight: 700;  
+text-align:center;
+text-transform:none;
+}
+
+.sec-head p{
+    color:#cacaca;
+font-size:16px;
+line-height:28px;
+text-align:center;  
+}
+
+// Why Choose Tror new section
+
+.part{
+  
+    border-radius: 50%;
+    padding: 25px;
+    text-align: center;
+    background-color: #fca434;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    border-right: 7px solid #fff;
+    h6{
+        font-size: 16px;
+        font-weight: 600;
+    }
+    p{
+        font-size: 15px;
+        color: #000;
+        font-weight: 400;
+    }
 }

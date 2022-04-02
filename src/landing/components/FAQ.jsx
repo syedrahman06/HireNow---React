@@ -83,7 +83,7 @@ const FAQ = () => {
           href="#form"
           style={{
             marginBottom: "30px",
-            padding: "15px 50px",
+            padding: "8px 30px",
             fontSize: "20px",
             fontWeight: "600",
             borderRadius: "100px",
