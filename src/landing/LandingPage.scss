@@ -3,6 +3,7 @@
 
 .landing-page{
     font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
 }
 
 
@@ -10,7 +11,7 @@
     position: relative;
     background-color: #0E0D0D;
     margin: 0 !important;
-    padding: 0px 75px 50px 75px !important;
+    padding: 0px 65px 50px 65px !important;
     height: auto; 
 }
 
@@ -202,6 +203,10 @@ p{
     border-radius: 30px;
 }
 
+.carousel-dark .carousel-indicators [data-bs-target] {
+    background-color: #fff !important;
+}
+
 @media only screen and (max-width:438px){
     .container-fluid{
         padding: 20px 30px 80px 30px !important;
@@ -251,5 +256,46 @@ text-align:center;
         font-size: 15px;
         color: #000;
         font-weight: 400;
+    }
+}
+
+// 
+.slider{
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    align-items: center;
+    justify-content: end;
+    align-content: center;
+    padding: 15px;
+
+}
+
+.slider .slide-track{
+    animation: scroll 20s linear infinite;
+    display: flex;
+    width: calc(280px * 18);
+    
+}
+
+.slider .slide{
+    height: 100px;
+    width: 300px;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px * 7));
     }
 }

@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import emailjs from "emailjs-com";
 import Carousel from "react-bootstrap/Carousel";
 import ai from "./Assets/ai.webp"
+import logo1 from "./Assets/logogroup-11.jpg"
 
 const LandingPage = () => {
   const [message, setMessage] = useState("");
@@ -47,7 +48,7 @@ const LandingPage = () => {
   return (
     <div className="landing-page">
       <Navbar />
-      <div className="container-fluid " style={{}}>
+      <div className="container-fluid " >
 
         <div className="row flex-row-reverse">
 
@@ -421,10 +422,104 @@ const LandingPage = () => {
         </div>
 
       </div>
-      <div className="logos"></div>
+
+
+
+
+
+      <div className="slider">
+        <div className="slide-track">
+          <div className="slide">
+            <img src="https://ibisworldwide.com/wp-content/uploads/2018/05/010518-toyota-connected.jpg" height="100" width="100" alt="" />
+          </div>
+          <div className="slide">
+            <img src="https://boomi.com/wp-content/uploads/deloitte-logo.png" height="100" width="100" alt="" />
+          </div>
+          <div className="slide">
+            <img src="https://mma.prnewswire.com/media/1373438/cognizant_Logo.jpg?p=facebook" height="100" width="100" alt="" />
+          </div>
+          <div className="slide">
+            <img src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202106/tcs_logo_1200_020621101143.jpg?size=1200:675" height="100" width="100" alt="" />
+          </div>
+          <div className="slide">
+            <img src="https://logos-world.net/wp-content/uploads/2020/11/Fox-News-Channel-Emblem.png" height="100" width="100" alt="" />
+          </div>
+          <div className="slide">
+            <img src="https://www.astroart-store.com/tuotekuvat/1500x1500/hp-logo-vector-download.jpg" height="100" width="100" alt="" />
+          </div>
+          <div className="slide">
+            <img src="https://www.india.com/wp-content/uploads/2016/10/hcl.jpg" height="100" width="100" alt="" />
+          </div>
+          <div className="slide">
+            <img src="https://mms.businesswire.com/media/20211007005785/en/761229/23/Optum%28R%29_RGB.jpg" height="100" width="100" alt="" />
+          </div>
+          <div className="slide">
+            <img src="https://1000logos.net/wp-content/uploads/2021/10/Macmillan-Publishers-Logo.jpg" height="100" width="100" alt="" />
+          </div>
+          <div className="slide">
+            <img src="https://assets.teradata.com/Tcom/Images/Rebrand/Teradata_logo-two_color.png" height="100" width="100" alt="" />
+          </div>
+
+          <div className="slide">
+            <img src="https://thumbs.dreamstime.com/b/amazon-company-vector-editable-logo-white-background-ready-to-print-182823873.jpg" height="100" width="100" alt="" />
+          </div>
+          <div className="slide">
+            <img src="https://www.chevron.com/-/media/shared-media/images/chevron-hallmark-twitter.jpg" height="100" width="100" alt="" />
+          </div>
+          <div className="slide">
+            <img src="https://www.matrics360.com/wp-content/uploads/2015/05/Dropbox.png" height="100" width="100" alt="" />
+          </div>
+          <div className="slide">
+            <img src="https://images.squarespace-cdn.com/content/v1/541aee5ce4b03814779ba114/1470777212495-4SUEG83BNLQ4J57Y2Z2G/image-asset.png" height="100" width="100" alt="" />
+          </div>
+          <div className="slide">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Ford_Motor_Company_Logo.svg/2560px-Ford_Motor_Company_Logo.svg.png" height="100" width="100" alt="" />
+          </div>
+          <div className="slide">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Disney%2B_logo.svg/1200px-Disney%2B_logo.svg.png" height="100" width="100" alt="" />
+          </div>
+          <div className="slide">
+            <img src="https://mms.businesswire.com/media/20220329006094/en/1019646/23/T-Mobile_New_Logo.jpg" height="100" width="100" alt="" />
+          </div>
+          <div className="slide">
+            <img src="https://www.americancentury.com/content/dam/ac/images/blog/aci-twitter.png" height="100" width="100" alt="" />
+          </div>
+          <div className="slide">
+            <img src="https://www.ttrweekly.com/site/wp-content/uploads/2019/11/avis-budget.jpeg" height="100" width="100" alt="" />
+          </div>
+          <div className="slide">
+            <img src="https://www.drugwatch.com/wp-content/uploads/johnson-johnson-logo.png" height="100" width="100" alt="" />
+          </div>
+          <div className="slide">
+            <img src="https://www.mulesoft.com/sites/default/files/2018-10/wells_fargo.png" height="100" width="100" alt="" />
+          </div>
+          <div className="slide">
+            <img src="https://www.stocktargetadvisor.com/blog/wp-content/uploads/2021/02/Intuit_2016_RGB_1.jpg" height="100" width="100" alt="" />
+          </div>
+          <div className="slide">
+            <img src="https://i1.wp.com/www.cordcuttersnews.com/wp-content/uploads/2019/09/ATT-logo.png?ssl=1" height="100" width="100" alt="" />
+          </div>
+          <div className="slide">
+            <img src="https://lender-logo.s3.amazonaws.com/banks/112837/aa3UNxv7ADKPQLBybtMogv5IUJmgIYsJdTjTbWK9.png" height="100" width="100" alt="" />
+          </div>
+          <div className="slide">
+            <img src="https://pngimage.net/wp-content/uploads/2018/06/travelers-insurance-logo-png-1.png" height="100" width="100" alt="" />
+          </div>
+          <div className="slide">
+            <img src="https://pictures.dealer.com/l/lithiagroupsite/0632/6f6e4c0f357c0fe67416990a5e64dcabx.jpg" height="100" width="100" alt="" />
+          </div>
+          <div className="slide">
+            <img src="https://coretek.co.uk/wp-content/uploads/microsoft-80658_960_720.png" height="100" width="100" alt="" />
+          </div>
+
+        </div>
+      </div>
+
+
+
 
       {/* <Technology /> */}
-      <WhyChooseTror />
+      < WhyChooseTror />
       {/* <OurClients /> */}
       {/* <Testimonials /> */}
       <FAQ />
