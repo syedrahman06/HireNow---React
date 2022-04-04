@@ -52,7 +52,7 @@ const LandingPage = () => {
 
         <div className="row flex-row-reverse">
 
-          <div className="col-md-4 form-section" >
+          <div className="col-xxl-4 col-xl-4 col-md-4 form-section" >
             <div className="landing-form mb-4" id="form">
               <h2 className="mt-3">Hire a Talent</h2>
               <form onSubmit={sendEmail}>
@@ -126,7 +126,7 @@ const LandingPage = () => {
               </form>
             </div>
           </div>
-          <div className="col-md-8">
+          <div className="col-xxl-8 col-xl-8 col-md-8">
             <Carousel variant="dark" className="landing-carousel">
               <Carousel.Item>
 
@@ -253,7 +253,7 @@ const LandingPage = () => {
                 </div>
               </Carousel.Item>
               <Carousel.Item>
-                <div className="technology py-5">
+                <div className="technology">
                   <div class="container">
                     <div class="row justify-content-center text-center">
                       <div class="col-md-10 col-lg-8">
@@ -339,7 +339,7 @@ const LandingPage = () => {
               <Carousel.Item>
                 <div className="whychoosetror ">
 
-                  <div className="container py-5">
+                  <div className="container">
 
                     <div className="row g-3">
                       <div class="sec-head col-sm-12">

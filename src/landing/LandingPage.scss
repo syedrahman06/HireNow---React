@@ -1,74 +1,82 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Pacifico&family=Poppins:wght@200;300;400;500;600;700&family=Sansita+Swashed:wght@300;400;500;600;700&family=Secular+One&display=swap');
 
-.landing-page{
+.landing-page {
     font-family: 'Montserrat', sans-serif;
     overflow: hidden;
 }
 
 
-.container-fluid{
+.container-fluid {
     position: relative;
     background-color: #0E0D0D;
     margin: 0 !important;
     padding: 0px 65px 50px 65px !important;
-    height: auto; 
+    height: auto;
 }
 
 // #0E0D0D - black
 // #fca434 - yellow
 
-.intro{
+.intro {
     margin-left: 50px;
     margin-right: 10px;
     margin-top: 2rem;
-    .bullet-reason{
-        align-items: center;
-    display: flex;
-    flex-direction: row;
-    font-size: 16px;
-    font-weight: 600;
-    color: #000;
-    background-color: #fca434;
-    padding: 7px 12px;
-    border-radius: 0px 30px 30px 0px;
-    margin-bottom: 20px !important;
 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    border-right: 7px solid #ffffff;
-        .icon{
+    .bullet-reason {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        font-size: 16px;
+        font-weight: 600;
+        color: #000;
+        background-color: #fca434;
+        padding: 7px 12px;
+        border-radius: 0px 30px 30px 0px;
+        margin-bottom: 20px !important;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        border-right: 7px solid #ffffff;
+
+        .icon {
             display: flex;
             align-items: center;
             margin-right: 1rem;
             color: #fff;
         }
     }
-    h1{
+
+    h1 {
         font-size: 40px;
         color: #ffffff;
         font-weight: 600;
         margin-bottom: 20px;
     }
-    p{
+
+    p {
         font-size: 15px !important;
-    text-align: justify;
-    color: #fff;
+        text-align: justify;
+        color: #fff;
     }
-    h4{
+
+    h4 {
         color: #ffffff;
         margin: 40px 0;
     }
+
     @media screen and (max-width:991px) {
         margin-right: 5px;
-        h1{
+
+        h1 {
             font-size: 30px;
             margin-bottom: 20px;
         }
     }
+
     @media screen and (max-width:480px) {
         margin: 10px;
     }
-    p{
+
+    p {
         text-align: justify;
         font-size: 18px;
     }
@@ -76,22 +84,24 @@
 
 
 
-.landing-form{
+.landing-form {
     margin: 30px;
     box-shadow: 0 3px 30px rgba(0, 0, 0, 0.16);
     max-width: 450px;
     border-radius: 0.5rem;
     background-color: #fff;
-    h2{
+
+    h2 {
         color: #fff;
-    font-weight: 600;
-    font-size: 23px;
-    background-color: #fca434;
+        font-weight: 600;
+        font-size: 23px;
+        background-color: #fca434;
         text-align: center;
         border-radius: 0.5rem 0.5rem 0 0;
         padding: 0.7rem;
-        box-shadow: 0 3px 5px rgba(0, 0, 0 , 0.06);
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.06);
     }
+
     @media screen and (max-width:480px) {
         // margin: 10px;
         margin: 0px;
@@ -101,49 +111,57 @@
         border-radius: 0.5rem;
         background-color: #fff;
     }
+
     @media screen and (max-width:991px) {
-        h2{
+        h2 {
             font-size: 20px;
         }
     }
-    form{
-        padding: 20px 50px;
+
+    form {
+        padding: 20px 24px;
+
         @media screen and (max-width:991px) {
             padding: 20px;
         }
 
-        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        ::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
             color: black;
-            opacity: 1; /* Firefox */
-          }
+            opacity: 1;
+            /* Firefox */
+        }
     }
-    
-    label{
+
+    label {
         font-weight: 600;
         color: #0D6EFD;
     }
-    .duration-radio{
+
+    .duration-radio {
         color: rgb(36, 36, 36);
     }
-    input[type="submit"]{
+
+    input[type="submit"] {
         padding: 10px 0px;
         font-size: 17px;
         font-weight: 600;
         border-radius: 100px;
         background-color: #fca434;
-        box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
         border: none;
     }
 }
+
 input:focus {
     outline: none;
-  }
+}
 
- 
+
 
 
 .element {
-    
+
     background-color: #fca434;
     border-radius: 0px 10px 0px 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.30);
@@ -156,49 +174,53 @@ input:focus {
     align-content: center;
     border-right: 8px solid #fff;
     border-left: 8px solid #fff;
-    h6{
+
+    h6 {
         font-weight: 600;
         font-size: 17px;
     }
-    p{
+
+    p {
         margin-bottom: 0px !important;
     }
-    
+
 }
 
-@media only screen and (max-width:438px){
-    .element{
+@media only screen and (max-width:438px) {
+    .element {
         text-align: center !important;
         height: auto !important;
     }
-    .tet{
+
+    .tet {
         display: flex !important;
-    align-content: center !important;
-    justify-content: flex-start !important;
-    align-items: center !important;
-    flex-direction: column !important;
+        align-content: center !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        flex-direction: column !important;
     }
 }
 
-.tet{
+.tet {
     display: flex;
-flex-wrap: wrap;
-align-content: center;
-justify-content: center;
-align-items: flex-start;
-p{
-    font-size: 13px;
-    margin-bottom: 10px !important;
-}
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+
+    p {
+        font-size: 13px;
+        margin-bottom: 10px !important;
+    }
 }
 
 
-.carousel-control-prev-icon{
+.carousel-control-prev-icon {
     background-color: #000;
     border-radius: 30px;
 }
 
-.carousel-control-next-icon{
+.carousel-control-next-icon {
     background-color: #000;
     border-radius: 30px;
 }
@@ -207,52 +229,54 @@ p{
     background-color: #fff !important;
 }
 
-@media only screen and (max-width:438px){
-    .container-fluid{
+@media only screen and (max-width:438px) {
+    .container-fluid {
         padding: 20px 30px 80px 30px !important;
     }
-    
+
 }
 
-.logos{
+.logos {
     border: 2px solid white;
     height: 150px;
 }
 
-.sec-head h4{
+.sec-head h4 {
     position: relative;
-padding:0;
-color:#fca434;
-line-height: 1;
-letter-spacing:0.3px;
-font-size: 34px;
-font-weight: 700;  
-text-align:center;
-text-transform:none;
+    padding: 0;
+    color: #fca434;
+    line-height: 1;
+    letter-spacing: 0.3px;
+    font-size: 34px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: none;
 }
 
-.sec-head p{
-    color:#cacaca;
-font-size:16px;
-line-height:28px;
-text-align:center;  
+.sec-head p {
+    color: #cacaca;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
 }
 
 // Why Choose Tror new section
 
-.part{
-  
+.part {
+
     border-radius: 50%;
     padding: 25px;
     text-align: center;
     background-color: #fca434;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     border-right: 7px solid #fff;
-    h6{
+
+    h6 {
         font-size: 16px;
         font-weight: 600;
     }
-    p{
+
+    p {
         font-size: 15px;
         color: #000;
         font-weight: 400;
@@ -260,8 +284,8 @@ text-align:center;
 }
 
 // 
-.slider{
-    height: auto;
+.slider {
+    height: 80px;
     margin: auto;
     overflow: hidden;
     position: relative;
@@ -271,31 +295,37 @@ text-align:center;
     align-content: center;
     padding: 15px;
 
+    @media only screen and (max-width:438px) {
+        height: 80px;
+    }
+
 }
 
-.slider .slide-track{
+.slider .slide-track {
     animation: scroll 20s linear infinite;
     display: flex;
     width: calc(280px * 18);
-    
+
 }
 
-.slider .slide{
-    height: 100px;
+.slider .slide {
+    height: 80px;
     width: 300px;
+    display: flex;
 }
 
-.slide img{
+.slide img {
     width: 100%;
     height: 100%;
 
 }
 
-@keyframes scroll{
-    0%{
+@keyframes scroll {
+    0% {
         transform: translateX(0);
     }
-    100%{
+
+    100% {
         transform: translateX(calc(-250px * 7));
     }
 }

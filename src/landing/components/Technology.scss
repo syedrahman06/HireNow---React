@@ -1,9 +1,10 @@
 .technology {
   font-family: "Poppins", sans-serif;
-  background-color:transparent;
+  background-color: transparent;
   color: #202020;
-  padding-top: 20px;
-  padding-bottom: 15px !important;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+
   text-align: left;
 }
 
@@ -24,13 +25,13 @@
   color: #fff;
 }
 
-.technology-list{
+.technology-list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
 
-  .technology-items{
+  .technology-items {
     align-items: center;
     background-color: #fff;
     // border: 1px solid #e1e1e1;
@@ -40,30 +41,35 @@
     display: flex;
     padding: 0px 7px;
     width: 150px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.30); 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.30);
     margin-bottom: 10px;
-    img{
+
+    img {
       height: 20px;
       margin-right: 6px;
     }
-    span{
+
+    span {
       font-size: 40px;
       margin-right: 6px;
     }
-    div{
+
+    div {
       font-size: 15px;
     }
   }
 }
 
-@media only screen and (max-width:438px){
-  .technology-items{
+@media only screen and (max-width:438px) {
+  .technology-items {
     width: 230px !important;
   }
-  div{
+
+  div {
     font-size: 20px !important;
   }
-  span{
+
+  span {
 
     margin-right: 20px !important;
   }
