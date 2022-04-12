@@ -1,35 +1,40 @@
-.landing-navbar{
+.landing-navbar {
     z-index: 999;
     position: sticky;
     top: 0;
-    background-color: #fca434;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 100px;
-    
-    box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+
     @media screen and (max-width:991px) {
         padding: 5px 10px;
     }
-    img{
+
+    img {
         width: 120px;
+
         @media screen and (max-width:991px) {
             width: 100px;
         }
     }
-    .hire-now{
-       color: white; 
-       background-color: #0E0D0D;
-       padding: 10px 40px;
-       font-weight: 500;
-       border-radius: 50px;
-       font-size: 18px;
-       text-decoration: none;
-       border: none;
-       @media screen and (max-width:991px) {
-        font-size: 16px;
-        padding: 5px 20px;
-    }
+
+    .hire-now {
+        color: white;
+        background-color: #0E0D0D;
+        padding: 10px 40px;
+        font-weight: 500;
+        border-radius: 50px;
+        font-size: 18px;
+        text-decoration: none;
+        border: none;
+
+        @media screen and (max-width:991px) {
+            font-size: 16px;
+            padding: 5px 20px;
+        }
     }
 }

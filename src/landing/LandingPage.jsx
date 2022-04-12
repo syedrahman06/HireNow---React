@@ -12,38 +12,64 @@ import emailjs from "emailjs-com";
 import Carousel from "react-bootstrap/Carousel";
 import ai from "./Assets/ai.webp"
 import logo1 from "./Assets/logogroup-11.jpg"
-
+import axios from "axios";
 const LandingPage = () => {
   const [message, setMessage] = useState("");
   const [btnDisable, setBtnDisable] = useState(false);
-  console.log(message);
-
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+    message: "",
+    file: "",
+  });
+  const HandelOnChange = (e) => {
+    setData({ ...data, [e.target.name]: e.target.value });
+  };
+  const HandelOnFileChange = (e) => {
+    setData({ ...data, file: e.target.files[0] });
+  };
   const sendEmail = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     setBtnDisable(true)
-    console.log("in the email section");
-    emailjs
-      .sendForm(
-        "service_hydpoft",
-        "template_2oj12x6",
-        e.target,
-        "cw7I4ClVW9nCMAq_q"
+    const formData = new FormData();
+    formData.append("name", data.name);
+    formData.append("email", data.email);
+    formData.append("phoneNumber", data.phoneNumber);
+    formData.append("message", data.message);
+    formData.append("file", data.file);
+    axios
+      .post(
+        "https://backend.tror.ai/api/contact",
+        formData
       )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setMessage("Thank you for your submission. We will get back to you soon.");
-          setBtnDisable(false)
-          e.target.reset();
-        },
-        (error) => {
-          console.log(error.text);
-          setBtnDisable(false)
-          e.target.reset();
-        }
-      );
+      .then((res) => {
+        setBtnDisable(false)
+        setMessage("Thank you for your submission. We will get back to you soon.");
+        console.log(res.data);
+        setData({
+          name: "",
+          email: "",
+          phoneNumber: "",
+          message: "",
+          file: "",
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+        setData({
+          name: "",
+          email: "",
+          phoneNumber: "",
+          message: "",
+          file: "",
+        });
+      });
+
 
   };
+
+
 
   return (
     <div className="landing-page">
@@ -54,7 +80,7 @@ const LandingPage = () => {
 
           <div className="col-xxl-4 col-xl-4 col-md-4 form-section" >
             <div className="landing-form mb-4" id="form">
-              <h2 className="mt-3">Hire a Talent</h2>
+              <h2 className="mt-3">Get a Job</h2>
               <form onSubmit={sendEmail}>
                 {/* <p>Guaranteed response within one business day!</p> */}
                 {message && (
@@ -70,6 +96,8 @@ const LandingPage = () => {
                     className="form-control"
                     placeholder="Enter Your Name"
                     disabled={btnDisable}
+                    onChange={HandelOnChange}
+                    value={data.name}
                   />
                 </div>
                 <div className="mb-3">
@@ -80,47 +108,55 @@ const LandingPage = () => {
                     className="form-control"
                     placeholder="Enter Your Email"
                     disabled={btnDisable}
+                    onChange={HandelOnChange}
+                    value={data.email}
                   />
                 </div>
                 <div className="mb-3">
                   <input
                     required
-                    name="phone"
+                    name="phoneNumber"
                     type="tel"
                     className="form-control"
                     id="phone"
                     placeholder="Enter Your Phone Number"
                     disabled={btnDisable}
+                    onChange={HandelOnChange}
+                    value={data.phoneNumber}
                   />
                 </div>
-                <div className="mb-3">
-                  <input
-                    name="company"
-                    type="text"
-                    className="form-control"
-                    placeholder="Company Name"
-                    disabled={btnDisable}
-                  />
-                </div>
-                <div className="mb-3">
-                  <input
-                    name="resources"
-                    type="text"
-                    className="form-control"
-                    placeholder="Resources you want to hire"
-                    disabled={btnDisable}
-                  />
+                <div class="mb-3">
+                  <textarea
+                    placeholder="Your Message"
+                    class="form-control"
+                    rows="1"
+                    name="message"
+                    onChange={HandelOnChange}
+                    value={data.message}
+                  ></textarea>
                 </div>
 
-
+                <div class="mb-3">
+                  <label for="resume" class="form-label">
+                    Upload your resume
+                  </label>
+                  <input
+                    class="form-control"
+                    accept=".docx,.pdf,.docs"
+                    type="file"
+                    id="resume"
+                    name="file"
+                    multiple
+                    onChange={HandelOnFileChange}
+                  />
+                </div>
 
                 <div class="d-grid mt-3">
                   <input
                     type="submit"
-                    value="Hire Now"
+                    value="Get a Job"
                     className="btn btn-primary"
                     disabled={btnDisable}
-
                   />
                 </div>
               </form>
@@ -131,7 +167,7 @@ const LandingPage = () => {
               <Carousel.Item>
 
                 <div className="intro">
-                  <h1>Hire the Best Talents</h1>
+                  <h1>Get The Best Job Opportunities.</h1>
                   <div className="row">
                     <div className="col-md-6">
                       <div className="bullet-reason my-2">
@@ -145,11 +181,11 @@ const LandingPage = () => {
                           >
                             <path
                               d="M.377 2.211l5.01 5.01-5.01 5.01a1.288 1.288 0 101.821 1.821L8.12 8.125a1.286 1.286 0 000-1.821L2.198.377a1.286 1.286 0 00-1.821 0 1.314 1.314 0 000 1.834z"
-                              fill="#000"
+                              fill="#fff"
                             ></path>
                           </svg>
                         </div>
-                        Dedicated Resources
+                        Competitive Salaries
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -163,11 +199,11 @@ const LandingPage = () => {
                           >
                             <path
                               d="M.377 2.211l5.01 5.01-5.01 5.01a1.288 1.288 0 101.821 1.821L8.12 8.125a1.286 1.286 0 000-1.821L2.198.377a1.286 1.286 0 00-1.821 0 1.314 1.314 0 000 1.834z"
-                              fill="#000"
+                              fill="#fff"
                             ></path>
                           </svg>
                         </div>
-                        Verified Skills
+                        Flexible Timezone
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -181,11 +217,11 @@ const LandingPage = () => {
                           >
                             <path
                               d="M.377 2.211l5.01 5.01-5.01 5.01a1.288 1.288 0 101.821 1.821L8.12 8.125a1.286 1.286 0 000-1.821L2.198.377a1.286 1.286 0 00-1.821 0 1.314 1.314 0 000 1.834z"
-                              fill="#000"
+                              fill="#fff"
                             ></path>
                           </svg>
                         </div>
-                        Experienced Professionals
+                        Career growth
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -199,52 +235,18 @@ const LandingPage = () => {
                           >
                             <path
                               d="M.377 2.211l5.01 5.01-5.01 5.01a1.288 1.288 0 101.821 1.821L8.12 8.125a1.286 1.286 0 000-1.821L2.198.377a1.286 1.286 0 00-1.821 0 1.314 1.314 0 000 1.834z"
-                              fill="#000"
+                              fill="#fff"
                             ></path>
                           </svg>
                         </div>
-                        Direct Communication
+                        Job security
                       </div>
                     </div>
-                    <div className="col-md-6">
-                      <div className="bullet-reason my-2">
-                        <div className="icon">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="8.503"
-                            height="14.43"
-                            viewBox="0 0 8.503 14.43"
-                          >
-                            <path
-                              d="M.377 2.211l5.01 5.01-5.01 5.01a1.288 1.288 0 101.821 1.821L8.12 8.125a1.286 1.286 0 000-1.821L2.198.377a1.286 1.286 0 00-1.821 0 1.314 1.314 0 000 1.834z"
-                              fill="#000"
-                            ></path>
-                          </svg>
-                        </div>
-                        Work In Your Timezone
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="bullet-reason my-2">
-                        <div className="icon">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="8.503"
-                            height="14.43"
-                            viewBox="0 0 8.503 14.43"
-                          >
-                            <path
-                              d="M.377 2.211l5.01 5.01-5.01 5.01a1.288 1.288 0 101.821 1.821L8.12 8.125a1.286 1.286 0 000-1.821L2.198.377a1.286 1.286 0 00-1.821 0 1.314 1.314 0 000 1.834z"
-                              fill="#000"
-                            ></path>
-                          </svg>
-                        </div>
-                        Cost Effective
-                      </div>
-                    </div>
+
+
                   </div>
                   <p className="mt-3">
-                    Tror helps you understand the expertise of the resources before you hire IT freelancers. Our process workflow ensures smooth communication and successful dedicated engagement which will lead to better and faster results. We have a team of highly experienced and world class professionals who can take your business to the next level. If you are looking to hire dedicated resources to improve the performance of your team, other IT consulting staff. Reach out to us now!
+                    Tror is built around the idea that employees should be able to do what they love. We have a very frank and open work culture where every member is free to express views and ideas. We work more like a family than a team. The work process is such that you can learn, earn and grow to your highest potential. If you are looking for a good job opportunity to make a better and flourishing career, reach out to us now!
                   </p>
 
                   {/* <h4>Reasons to Hire Resources from Tror</h4> */}
@@ -255,7 +257,7 @@ const LandingPage = () => {
               <Carousel.Item>
                 <div className="technology">
                   <div class="container">
-                    <div class="row justify-content-center text-center">
+                    <div class="row justify-content-center">
                       <div class="col-md-10 col-lg-8">
                         <div class="header-section">
                           <h2 class="title">Technology we cover</h2>
@@ -267,7 +269,7 @@ const LandingPage = () => {
                     </div>
                     <div className="technology-list">
                       <div className="technology-items">
-                        <img src={ai} alt="" />
+                        <span style={{ color: "#DD4B25" }}><i class="fa-brands fa-html5" style={{ height: '25px' }}></i></span>
                         <div>AI</div>
                       </div>
                       <div className="technology-items">
@@ -337,7 +339,7 @@ const LandingPage = () => {
               </Carousel.Item>
 
               <Carousel.Item>
-                <div className="whychoosetror ">
+                <div className="test ">
 
                   <div className="container">
 
@@ -356,10 +358,10 @@ const LandingPage = () => {
 
                           <div className="tet">
                             <p>
-                              Tror has a huge pool of talent. Don’t just settle for someone: find an agency that understands your project and has the competencies you need. I highly recommend Tror for all your resources need.
+                              Tror is an amazing place to work. The culture is transparent and energetic, every employee, irrespective of their position is given a chance to be heard, and there are tremendous opportunities available for those who want to build a fast growing career.
                             </p>
-                            <i class="fa-solid fa-circle-check" style={{ marginRight: '10px' }}></i>
-                            <h6>John Peterson </h6>
+                            <i class="fa-solid fa-circle-check" style={{ marginRight: '10px', color: '#fff' }}></i>
+                            <h6>Nik Watt</h6>
 
                           </div>
 
@@ -370,10 +372,10 @@ const LandingPage = () => {
 
                           <div className="tet">
                             <p>
-                              They understand well and work in the industry to deliver an outcome that will truly stand out. They’ve always delivered solutions that are satisfactory and result oriented.
+                              Its been about three years working at Tror and it has really been a very enriching experience. Peers at Tror are extremely encouraging, talented and like a big family who are always around to support you at times of need.
                             </p>
-                            <i class="fa-solid fa-circle-check" style={{ marginRight: '10px' }}></i>
-                            <h6>Vijay Arora</h6>
+                            <i class="fa-solid fa-circle-check" style={{ marginRight: '10px', color: '#fff' }}></i>
+                            <h6>Ajay Mehta</h6>
 
                           </div>
 
@@ -384,10 +386,10 @@ const LandingPage = () => {
 
                           <div className="tet">
                             <p>
-                              I see Tror as an extension of our team and helping us achieve our success by delivering us with all the required technical resources we need.
+                              It's been a great time to join Tror as the company provides new opportunities of learning and improving skill sets. With a very rich and diverse work culture, Tror endowed me with the best-in-class industry mentors. Also the pay is great and it increases with your performance and experience.
                             </p>
-                            <i class="fa-solid fa-circle-check" style={{ marginRight: '10px' }}></i>
-                            <h6>Marry Bernard</h6>
+                            <i class="fa-solid fa-circle-check" style={{ marginRight: '10px', color: '#fff' }}></i>
+                            <h6>Manda Suman</h6>
 
                           </div>
 
@@ -398,10 +400,10 @@ const LandingPage = () => {
 
                           <div className="tet">
                             <p>
-                              They have been able to complete all our requirements that we threw at them so far both fast and economically. We have been completely satisfied with the quality of their resources and developers in that regard.
+                              I had been entrusted with opportunities and responsibilities early on, helping me accelerate my growth and development. The work culture of the company is very nurturing. The communication channels are open and frank.
                             </p>
-                            <i class="fa-solid fa-circle-check" style={{ marginRight: '10px' }}></i>
-                            <h6>Sam Patel</h6>
+                            <i class="fa-solid fa-circle-check" style={{ marginRight: '10px', color: '#fff' }}></i>
+                            <h6>Nain Dhawan</h6>
 
                           </div>
 

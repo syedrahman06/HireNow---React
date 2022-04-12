@@ -5,20 +5,24 @@ import "./FAQ.scss";
 const FAQ = () => {
   const faqs = [
     {
-      q: "How do I hire a good resource ?",
-      a: "Hiring a good developer takes efforts, time and experience of works on both an operational and managerial level. Knowing what you are looking for when it comes to technical skills is a plus as well as knowing how to test their skills. We can take care of all these aspects while you can continue your grow your business.",
+      q: "How do I apply for the job?",
+      a: "You can just fill the above form and our HR will get back to you with more details.",
     },
     {
-      q: "How much does it cost to hire a resource?",
-      a: "The cost to hire a resource depends on your location. In the United States, a developer’s salary can be anywhere from $60,000 to $175,000 depending on their skills, experience and prior work history.",
+      q: "How much salary will I receive?",
+      a: "Tror offers a very good pay as per the industry standards depending on your skills, experience and prior work history.",
     },
     {
-      q: "How do remote resources work?",
-      a: "Remote resources work in the comfort of their homes by leveraging technologies such as Zoom, Skype and Slack to communicate with the rest of their team. Much of the workflow is remote, such as pushing projects onto GitHub or Bitbucket and they can manage their tasks using products such as Trello and Jira.",
+      q: "Does the company provide incentives and bonus?",
+      a: "Tror offers high incentives and bonuses as per your performance.",
     },
     {
-      q: "Where can I find remote resources?",
-      a: "You can just fill the above form and we will take care of all your needs.",
+      q: "Can I work remotely?",
+      a: "Yes, you can work remotely for various remote positions.",
+    },
+    {
+      q: "Will I work in day shift or night shift?",
+      a: "You get both the opportunities with Tror and you can choose the shift as per your flexibility.",
     },
   ];
 
@@ -92,7 +96,7 @@ const FAQ = () => {
             border: 'none'
           }}
         >
-          Hire Now
+          Get a Job
         </a>
       </div>
     </div>

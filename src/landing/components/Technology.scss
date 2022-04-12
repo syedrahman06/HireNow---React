@@ -1,6 +1,6 @@
 .technology {
   font-family: "Poppins", sans-serif;
-  background-color: transparent;
+  background-color: #fca434;
   color: #202020;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -10,12 +10,14 @@
 
 .technology .header-section {
   margin-bottom: 10px;
+
 }
 
 .technology .header-section .title {
   position: relative;
   padding-bottom: 14px;
   color: #fff;
+  text-align: center;
   font-weight: 600;
   font-size: 30px;
 }
@@ -33,10 +35,10 @@
 
   .technology-items {
     align-items: center;
-    background-color: #fff;
+    background-color: #0e0d0d;
     // border: 1px solid #e1e1e1;
     border-radius: 5px 50px 50px 5px;
-    border-right: 6px solid #fca434;
+    border-right: 6px solid #fff;
     color: #000;
     display: flex;
     padding: 0px 7px;
@@ -56,6 +58,7 @@
 
     div {
       font-size: 15px;
+      color: #fff;
     }
   }
 }

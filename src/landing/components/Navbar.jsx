@@ -8,7 +8,7 @@ const Navbar = () => {
         <img src={logo} alt="logo" />
       </a>
       <a href="#form" className="hire-now">
-        Hire Now
+        Get a Job
       </a>
     </div>
   );
